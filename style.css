@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    /* background-color: antiquewhite; */
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav #navp2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#navp1{
+    /* background-color: red; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#navp1 svg{
+    display: block;
+}
+
+#navp2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+margin: 0 20px;}
+
+#icons{
+    padding: 10px;
+    background-color: #F7F7F7;
+    border-radius: 50px;
+}
+
+#navp2 #icons i{
+    font-size: 18px;
+    margin:0 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: rgb(189, 228, 191);
+    transform:translate(-50%,-50%) scale(0) ;
+
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 19vh;
+    position: relative;
+}
+
+#page1 h1 {
+    font-size: 16vw;
+    text-transform: uppercase;
+    line-height: 14vw;
+    letter-spacing: -4px;
+    font-weight: 700;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    /*background-color: grey;*/
+    margin-top: 1vw;
+
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2vw;
+    position: fixed;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+    border-radius: 50%;
+    text-transform: uppercase;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2 {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: aqua;*/
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+    display: flex;
+
+
+}
+
+#page2 .elem {
+    width: 31%;
+    height: 100%;
+    /*background-color: red;*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#page2 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    scale: 1.1;
+}
+
+.elem .dets {
+    height: 20px;
+    width: 90%;
+    position: absolute;
+    z-index: 9;
+    background-color: bisque;
+    border-radius: 40px;
+}
+
+.elem .dets:hover {
+    height: 100px;
+}
+
+#page3 {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 54vh;
+    width: 38vw;
+    /*background-color: red;*/
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.child img {
+    height: 100%;
+
+
+}
+
+@media (max-width:600px) {
+    #page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+
+    }
+
+    #video-container #play {
+        padding: 9.5vw 7.2vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: black;
+        color: white;
+        font-size: 4.5vw;
+        border-radius: 50%;
+        text-transform: uppercase;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        width: 100%;
+        min-height: 100vh;
+        /* background-color: aqua;*/
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3vw 1vw;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #page2 .elem {
+        width: 100%;
+        height: 100vh;
+        /*background-color: red;*/
+        overflow: hidden;
+
+    }
+}
